@@ -7,7 +7,6 @@ const getToken = require("../utils/token.js");
 const Registers = async (req, res) => {
     try {
         console.log("Enter in register");
-
         const { fullname, username, password, gender, confpassword } = req.body;
         if (!fullname || !username || !gender || !password || !confpassword) {
             return res.status(400).json({ message: "All entry should be filled" });
